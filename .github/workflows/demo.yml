@@ -25,11 +25,12 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: '17'
-        distribution: 'temurin'
+        #distribution: 'temurin'
+        distribution: 'azul'
 
     - name: Java version
       run: "java -version"
       
     - name: Python version
-      run: "python -version"
+      run: "python --version"
         
