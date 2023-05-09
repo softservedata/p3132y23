@@ -26,7 +26,7 @@ jobs:
       with:
         java-version: '17'
         #distribution: 'temurin'
-        distribution: 'azul'
+        distribution: 'zulu'
 
     - name: Java version
       run: "java -version"
