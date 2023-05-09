@@ -1,0 +1,26 @@
+name: Demo1
+on:
+  #push:
+  #  branches:
+  #    - main
+  #    - jenk
+  workflow_dispatch:
+  
+jobs:
+  checking-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+    
+    - name: Directory
+      run: 'pwd'
+
+    - name: List root files
+      run: 'ls -al'
+
+    - name: Node version
+      run: "node --version"
+        
+    - name: Java version
+      run: "java -version"
+        
