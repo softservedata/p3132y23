@@ -1,0 +1,79 @@
+Events that trigger workflows - GitHub Docs.html
+https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#pull_request
+About self-hosted runners - GitHub Docs.html
+https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/about-self-hosted-runners
+
+https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/about-self-hosted-runners
+
+actions_runner_ The Runner for GitHub Actions.html
+https://github.com/actions/runner
+
+
+
+
+
+https://linuxhint.com/how-to-comment-in-jenkinsfile/
+https://naiveskill.com/jenkins-pipeline-define-variable/
+https://devops.stackexchange.com/questions/6126/how-to-define-variable-in-jenkins-declarative-pipeline
+https://www.shellhacks.com/jenkins-pipeline-define-variable-jenkins-variables/
+https://serverfault.com/questions/205498/how-to-get-pid-of-just-started-process
+https://prog-cpp.ru/c-struct/
+https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#pull_request
+https://techviewleo.com/install-java-openjdk-on-ubuntu-linux/
+
+
+
+Дайте скріни
+
+
+Continuous Integration
+GitHub Action. Introduction
+First Workflow
+About Workflows
+Case Studies
+
+
+
+name: Continuous Integration
+on:
+  #push:
+  #  branches:
+  #    - main
+  #    - jenk
+  workflow_dispatch:
+  
+jobs:
+  my_first_job:
+    runs-on: ubuntu-latest
+
+    steps:
+    
+    - name: Set up JDK 17
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'zulu'
+
+    - name: Show Java version
+      run: "java -version"
+
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        ref: jenk
+
+    - name: Show directory
+      run: 'pwd'
+
+    - name: List files
+      run: 'ls -al'
+
+    - name: Install Dependencies
+      run: 'mvn compile'
+
+    - name: Build application
+      run: 'mvn package -DskipTests'
+
+    - name: Test application
+      run: 'mvn test'
+      
