@@ -1,9 +1,9 @@
 name: Continuous Integration
 on:
-  #push:
-  #  branches:
-  #    - main
-  #    - jenk
+  push:
+    branches:
+      - main
+      - jenk
   workflow_dispatch:
   
 jobs:
