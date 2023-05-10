@@ -33,4 +33,8 @@ jobs:
       
     - name: Python version
       run: "python --version"
-        
+      
+    - name: Local variable
+      env:
+        MESSAGE: "qwerty"
+        run: "echo $MESSAGE"
