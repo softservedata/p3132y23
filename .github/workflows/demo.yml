@@ -23,7 +23,8 @@ jobs:
 
     - uses: actions/setup-node@v3
       with:
-        node-version: 16
+        #node-version: 16
+        node-version: ${{ secrets.NODE_VERSION }}
         
     - name: Updated Node version
       run: "node --version"
@@ -47,3 +48,7 @@ jobs:
     - env:
         MESSAGE: "qwerty"
       run: "echo $MESSAGE"
+      
+    - env:
+        MESSAGE2: "${{ secrets.NODE_VERSION }}"
+      run: "echo $MESSAGE2"
