@@ -86,12 +86,12 @@ workspace.xml
 /**/*.iml
 /**/*.ucls
 
-/**/frontend/static/
-/**/frontend/*.png
-/**/frontend/*.json
-/**/frontend/*.ico
-/**/frontend/*.html
-/**/frontend/robots.txt
+#/**/frontend/static/
+#/**/frontend/*.png
+#/**/frontend/*.json
+#/**/frontend/*.ico
+#/**/frontend/*.html
+#/**/frontend/robots.txt
 
 # Ignore binary
 *.bin
@@ -107,11 +107,11 @@ workspace.xml
 
 # Ignore Picture
 *.bmp
-*.png
+#*.png
 *.jpg
 *.jpeg
 
-*.html
+#*.html
 
 # Ignore doc/notes.txt, but not doc/info/arch.txt
 # doc/*.txt
